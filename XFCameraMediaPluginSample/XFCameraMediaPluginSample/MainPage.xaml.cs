@@ -7,6 +7,8 @@ using Xamarin.Forms;
 
 namespace XFCameraMediaPluginSample
 {
+    using Plugin.Geolocator;
+    using Plugin.Geolocator.Abstractions;
     using Plugin.Media;
 
     public partial class MainPage : ContentPage
@@ -35,7 +37,14 @@ namespace XFCameraMediaPluginSample
                     if (file == null)
                         return;
 
-                    await DisplayAlert("File Location", file.Path, "OK");
+                    // GPSで位置情報を取得
+                    var locator = CrossGeolocator.Current;
+                    locator.DesiredAccuracy = 50; // <- 1. 50mの精度に指定
+
+                    var position = await locator.GetPositionAsync(timeout: new TimeSpan(0, 0, 0, 10000));
+
+                    var msg = $"File Location={file.Path}\n\nAltitude={position.Altitude}\nLongitude={position.Longitude}";
+                    await DisplayAlert("Message", msg, "OK");
 
                     imagePhoto.Source = ImageSource.FromStream(() =>
                         {
