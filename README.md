@@ -2,8 +2,8 @@
 - [MediaPlugin](https://github.com/jamesmontemagno/MediaPlugin)のサンプルです。
 ### 手順
 1. Xam.Plugin.Mediaをnugetからインストール
-1. XAMLにButtonとImageを配置
-1. Buttonにカメラ起動から保存までを実装
+1. MainPage.XAMLにButtonとImageを配置
+1. Button.Clilkedイベントにカメラ起動から保存までを実装
 1. AndroidManifest.xmlに以下を追加
     - カメラ使用のPermission（WRITE_EXTERNAL_STORAGE）
     - 画像を保存するためのFileProvider（android.support.v4.content.FileProvider）
@@ -12,3 +12,5 @@
 ![](./assets/1.png "1")
 ![](./assets/2.png "2")
 ![](./assets/3.png "3")
+![](./assets/3.png "4")
+![](./assets/3.png "5")
