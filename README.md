@@ -1,6 +1,7 @@
 # XFCameraMediaPluguinSample
 - [MediaPlugin](https://github.com/jamesmontemagno/MediaPlugin)のサンプルです。
-### 手順
+- Xamarin.FormsのAndroid版のみ動作します。
+### 手順（Android）
 1. Xam.Plugin.Mediaをnugetからインストール
 1. MainPage.XAMLにButtonとImageを配置
 1. Button.Clilkedイベントにカメラ起動から保存までを実装
