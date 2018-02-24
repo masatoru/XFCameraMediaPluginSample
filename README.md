@@ -8,3 +8,7 @@
     - カメラ使用のPermission（WRITE_EXTERNAL_STORAGE）
     - 画像を保存するためのFileProvider（android.support.v4.content.FileProvider）
 1. Resources/xml/file_path.xmlを追加
+### スクショ
+![](./assets/1.png "1")
+![](./assets/2.png "2")
+![](./assets/3.png "3")
