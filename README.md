@@ -1,10 +1,10 @@
 # XFCameraMediaPluguinSample
 - [MediaPlugin](https://github.com/jamesmontemagno/MediaPlugin)のサンプルです。
 ### 手順
-- Xam.Plugin.Mediaをnugetからインストール
-- XAMLにButtonとImageを配置
-- Buttonにカメラ起動から保存までを実装
-- AndroidManifest.xmlに以下を追加
+1. Xam.Plugin.Mediaをnugetからインストール
+1. XAMLにButtonとImageを配置
+1. Buttonにカメラ起動から保存までを実装
+1. AndroidManifest.xmlに以下を追加
     - カメラ使用のPermission（WRITE_EXTERNAL_STORAGE）
     - 画像を保存するためのFileProvider（android.support.v4.content.FileProvider）
-- Resources/xml/file_path.xmlを追加
+1. Resources/xml/file_path.xmlを追加
