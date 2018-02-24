@@ -1,4 +1,4 @@
-# XFCameraMediaPluguinSample
+# XFCameraMediaPluginSample
 - [MediaPlugin](https://github.com/jamesmontemagno/MediaPlugin)のサンプルです。
 - Xamarin.FormsのAndroid版のみ動作します。
 ### 手順（Android）
