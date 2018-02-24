@@ -16,33 +16,33 @@ namespace XFCameraMediaPluginSample
 			InitializeComponent();
 
 
-		    this.btnTakePhoto.Clicked += async (sender, args) =>
-		        {
-		            await CrossMedia.Current.Initialize();
+            this.btnTakePhoto.Clicked += async (sender, args) =>
+                {
+                    await CrossMedia.Current.Initialize();
 
-		            if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
-		            {
-		                DisplayAlert("No Camera", ":( No camera available.", "OK");
-		                return;
-		            }
+                    if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
+                    {
+                        DisplayAlert("No Camera", ":( No camera available.", "OK");
+                        return;
+                    }
 
-		            var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
-		                                                                   {
-		                                                                       Directory = "Sample",
-		                                                                       Name = "test.jpg"
-		                                                                   });
+                    var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
+                    {
+                        Directory = "Sample",
+                        Name = "test.jpg"
+                    });
 
-		            if (file == null)
-		                return;
+                    if (file == null)
+                        return;
 
-		            await DisplayAlert("File Location", file.Path, "OK");
+                    await DisplayAlert("File Location", file.Path, "OK");
 
-		            imagePhoto.Source = ImageSource.FromStream(() =>
-		                {
-		                    var stream = file.GetStream();
-		                    return stream;
-		                });
-		        };
-		}
+                    imagePhoto.Source = ImageSource.FromStream(() =>
+                        {
+                            var stream = file.GetStream();
+                            return stream;
+                        });
+                };
+        }
 	}
 }
