@@ -5,6 +5,7 @@
              x:Class="XFCameraMediaPluginSample.MainPage">
     <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
         <Button Text="Take Photo" x:Name="btnTakePhoto"></Button>
+        <Image x:Name="imagePhoto"></Image>
     </StackLayout>
 
 </ContentPage>
