@@ -1,9 +1,10 @@
 # XFCameraMediaPluginSample
+### 説明
 - カメラで画像を保存してGPS情報を取得します。
 - カメラ撮影は[MediaPlugin](https://github.com/jamesmontemagno/MediaPlugin)を使用しています。
 - GPS情報は[Geolocator Plugin](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/Geolocator)を使用しています。
 - Xamarin.FormsのAndroid版のみ動作します。
-### 手順（Android）
+### 実装手順（Androidのみ）
 1. NuGetからXam.Plugin.Media（MediaPlugin）とXam.Plugin.Geolocator（Geolocator Plugin）をインストール
 1. MainPage.XAMLにButtonとImageを配置
 1. Button.Clilkedイベントに以下を実装
