@@ -7,3 +7,4 @@
 - AndroidManifest.xmlに以下を追加
     - カメラ使用のPermission（WRITE_EXTERNAL_STORAGE）
     - 画像を保存するためのFileProvider（android.support.v4.content.FileProvider）
+- Resources/xml/file_path.xmlを追加
