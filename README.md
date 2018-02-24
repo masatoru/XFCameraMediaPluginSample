@@ -12,6 +12,7 @@
     - （画像保存時に）GPS情報を取得（参考: [Plugins for Xamarinを使いこなすには？（GPS編）](https://www.buildinsider.net/mobile/xamarintips/0063)）
 1. AndroidManifest.xmlに以下を追加
     - カメラ使用のPermission（WRITE_EXTERNAL_STORAGE）
+    - GPS情報取得のPermission（ACCESS_COARSE_LOCATION, ACCESS_FINE_LOCATION）
     - 画像を保存するためのFileProvider（android.support.v4.content.FileProvider）
 1. Resources/xml/file_path.xmlを追加
 ### スクショ
