@@ -41,7 +41,7 @@ namespace XFCameraMediaPluginSample
                     var locator = CrossGeolocator.Current;
                     locator.DesiredAccuracy = 50; // <- 1. 50mの精度に指定
 
-                    var position = await locator.GetPositionAsync(timeout: new TimeSpan(0, 0, 0, 10000));
+                    var position = await locator.GetPositionAsync(timeout: new TimeSpan(0, 0, 0, 100));
 
                     var msg = $"File Location={file.Path}\n\nAltitude={position.Altitude}\nLongitude={position.Longitude}";
                     await DisplayAlert("Message", msg, "OK");
