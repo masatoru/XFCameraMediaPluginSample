@@ -1,11 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+
+<ContentPage x:Class="XFCameraMediaPluginSample.MainPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:XFCameraMediaPluginSample"
-             x:Class="XFCameraMediaPluginSample.MainPage">
-    <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-        <Button Text="Take Photo" x:Name="btnTakePhoto"></Button>
-        <Image x:Name="imagePhoto" HorizontalOptions="Fill" VerticalOptions="Fill"></Image>
+             xmlns:local="clr-namespace:XFCameraMediaPluginSample">
+    <StackLayout HorizontalOptions="CenterAndExpand"
+                 VerticalOptions="CenterAndExpand"
+                 Orientation="Vertical">
+        <Button x:Name="btnTakePhoto" Text="Take Photo" />
+        <Image x:Name="imagePhoto"
+               HorizontalOptions="Fill"
+               VerticalOptions="Fill" />
     </StackLayout>
 
 </ContentPage>
