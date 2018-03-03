@@ -56,12 +56,12 @@ namespace XFCameraMediaPluginSample.ViewModels
 
             try
             {
+                IsBusy = true;
                 var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
                 {
                     Directory = "Sample",
                     Name = "test.jpg"
                 });
-                IsBusy = true;
 
                 if (file == null)
                     return;
@@ -96,8 +96,10 @@ namespace XFCameraMediaPluginSample.ViewModels
         {
         }
 
-        public void OnNavigatingTo(NavigationParameters parameters)
+        public async void OnNavigatingTo(NavigationParameters parameters)
         {
+            // 最初にカメラを起動する
+            await TakePhotoAsync();
         }
     }
 }
