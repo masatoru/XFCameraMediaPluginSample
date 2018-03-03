@@ -5,7 +5,7 @@
     <StackLayout HorizontalOptions="CenterAndExpand"
                  VerticalOptions="CenterAndExpand"
                  Orientation="Vertical">
-        <ActivityIndicator IsRunning="{Binding IsBusy}" />
+        <ActivityIndicator IsVisible="{Binding IsBusy}" IsRunning="{Binding IsBusy}" />
         <Button Command="{Binding TakePhotoCommand}" Text="Take Photo" />
         <Image HorizontalOptions="Fill"
                VerticalOptions="Fill"
