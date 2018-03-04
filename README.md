@@ -3,6 +3,7 @@
 - Xamarin.Formsによるカメラ撮影とGPS情報のサンプルです（Android版のみ）。
 - カメラ撮影は [MediaPlugin](https://github.com/jamesmontemagno/MediaPlugin) を使用しています。
 - GPS情報は [Geolocator Plugin](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/Geolocator) を使用しています。
+- ActiveIndicatorを中央に配置するのは [インジケータを画面中央に表示する方法](http://itblogdsi.blog.fc2.com/blog-entry-193.html) を参考にしました。
 ### 実装手順（Androidのみ）
 1. NuGetからXam.Plugin.Media（MediaPlugin）とXam.Plugin.Geolocator（Geolocator Plugin）をインストール
 1. MainPage.XAMLにButtonとImageを配置
@@ -18,5 +19,6 @@
 ![](./assets/1.jpg "1")
 ![](./assets/2.jpg "2")
 ![](./assets/3.jpg "3")
+![](./assets/3-2.jpg "3-2")
 ![](./assets/4.jpg "4")
 ![](./assets/5.jpg "5")
