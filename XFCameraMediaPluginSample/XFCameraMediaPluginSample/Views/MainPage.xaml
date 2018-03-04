@@ -2,13 +2,62 @@
 <ContentPage x:Class="XFCameraMediaPluginSample.Views.MainPage"
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <StackLayout HorizontalOptions="CenterAndExpand"
-                 VerticalOptions="CenterAndExpand"
-                 Orientation="Vertical">
-        <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
-        <Button Command="{Binding TakePhotoCommand}" Text="Take Photo" />
-        <Image HorizontalOptions="Fill"
-               VerticalOptions="Fill"
-               Source="{Binding ImageSource}" />
+    <StackLayout x:Name="baseLayout"
+                 VerticalOptions="FillAndExpand"
+                 Orientation="Vertical"
+                 Spacing="15">
+        <ScrollView x:Name="scrollLayout"
+                    VerticalOptions="FillAndExpand"
+                    Orientation="Vertical">
+            <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <StackLayout x:Name="mainLayout"
+                             VerticalOptions="FillAndExpand"
+                             Orientation="Vertical">
+                    <StackLayout.Padding>
+                        <OnPlatform Android="10, 10, 10, 0"
+                                    WinPhone="10, 10, 10, 0"
+                                    iOS="10, 10, 10, 0"
+                                    x:TypeArguments="Thickness" />
+                    </StackLayout.Padding>
+
+                    <!--  ここに配置するコンテンツを置く  -->
+                    <Button Command="{Binding TakePhotoCommand}" Text="Take Photo" />
+                    <Image HorizontalOptions="Fill"
+                           VerticalOptions="Fill"
+                           Source="{Binding ImageSource}" />
+                </StackLayout>
+                <ContentView x:Name="cvLayer"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             BackgroundColor="Orange"
+                             IsVisible="{Binding IsBusy}"
+                             Opacity="0.8"
+                             RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                               Property=Width,
+                                                                               Factor=0.4}"
+                             RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                               Property=Height,
+                                                                               Factor=0.4}">
+                    <Frame x:Name="frLayer"
+                           BackgroundColor="White"
+                           IsVisible="{Binding IsBusy}">
+                        <StackLayout>
+                            <ActivityIndicator x:Name="Indicator" IsRunning="{Binding IsBusy}">
+                                <ActivityIndicator.Color>
+                                    <OnPlatform Android="Orange"
+                                                WinPhone="Accent"
+                                                iOS="Orange"
+                                                x:TypeArguments="Color" />
+                                </ActivityIndicator.Color>
+                            </ActivityIndicator>
+                            <!--  <app:CFLabel Text="Data loading..."  -->
+                            <!--  TextColor="Black"  -->
+                            <!--  XAlign="Center" />  -->
+                            <Label Text="処理中..." />
+                        </StackLayout>
+                    </Frame>
+                </ContentView>
+            </RelativeLayout>
+        </ScrollView>
     </StackLayout>
 </ContentPage>
