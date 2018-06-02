@@ -10,6 +10,8 @@ using Plugin.Geolocator;
 using Plugin.Media;
 using Prism.Services;
 using Xamarin.Forms;
+using GeolocatorSample;
+using Plugin.Permissions.Abstractions;
 
 namespace XFCameraMediaPluginSample.ViewModels
 {
@@ -56,6 +58,10 @@ namespace XFCameraMediaPluginSample.ViewModels
 
             try
             {
+                var hasPermission = await Utils.CheckPermissions(Permission.Location);
+                if (!hasPermission)
+                    return;
+                
                 IsBusy = true;
                 var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
                 {
@@ -70,7 +76,7 @@ namespace XFCameraMediaPluginSample.ViewModels
                 var locator = CrossGeolocator.Current;
                 locator.DesiredAccuracy = 50; // <- 1. 50mの精度に指定
 
-                var position = await locator.GetPositionAsync(timeout: new TimeSpan(0, 0, 0, 100));
+                var position = await locator.GetPositionAsync(new TimeSpan(0, 0, 0, 1), null, false);
 
                 var msg = $"File Location={file.Path}\n\nAltitude={position.Altitude}\nLongitude={position.Longitude}";
                 await PageDialogService.DisplayAlertAsync("Message", msg, "OK");
