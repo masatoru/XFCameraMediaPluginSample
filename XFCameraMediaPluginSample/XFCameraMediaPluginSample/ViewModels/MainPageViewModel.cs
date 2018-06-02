@@ -13,7 +13,7 @@ using Xamarin.Forms;
 
 namespace XFCameraMediaPluginSample.ViewModels
 {
-    public class MainPageViewModel : BindableBase, INavigationAware
+    public class MainPageViewModel : BindableBase //, INavigationAware
     {
         private INavigationService NavigationService;
 
@@ -96,10 +96,10 @@ namespace XFCameraMediaPluginSample.ViewModels
         {
         }
 
-        public async void OnNavigatingTo(NavigationParameters parameters)
-        {
-            // 最初にカメラを起動する
-            await TakePhotoAsync();
-        }
+        //public async void OnNavigatingTo(NavigationParameters parameters)
+        //{
+        //    // 最初にカメラを起動する
+        //    await TakePhotoAsync();
+        //}
     }
 }
