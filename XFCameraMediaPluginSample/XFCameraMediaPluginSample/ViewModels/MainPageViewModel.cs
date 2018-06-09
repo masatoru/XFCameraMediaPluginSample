@@ -31,6 +31,10 @@ namespace XFCameraMediaPluginSample.ViewModels
 
         public DelegateCommand TakePhotoCommand { get; }
 
+        public DelegateCommand SignInCommand { get; }
+
+        public DelegateCommand GetLocationCommand { get; }
+
         private bool isBusy;
 
         public bool IsBusy
@@ -43,7 +47,9 @@ namespace XFCameraMediaPluginSample.ViewModels
         {
             NavigationService = navigationService;
             this.PageDialogService = pageDialogService;
+            this.SignInCommand = new DelegateCommand(async () => await this.SignInAsync());
             this.TakePhotoCommand = new DelegateCommand(async () => await this.TakePhotoAsync());
+            this.GetLocationCommand = new DelegateCommand(async () => await this.GetLocationAsync());
         }
 
         private async Task TakePhotoAsync()
@@ -71,15 +77,9 @@ namespace XFCameraMediaPluginSample.ViewModels
 
                 if (file == null)
                     return;
+                var message = $"File Location={file.Path}\n";
 
-                // GPSで位置情報を取得
-                var locator = CrossGeolocator.Current;
-                locator.DesiredAccuracy = 50; // <- 1. 50mの精度に指定
-
-                var position = await locator.GetPositionAsync(new TimeSpan(0, 0, 0, 1), null, false);
-
-                var msg = $"File Location={file.Path}\n\nAltitude={position.Altitude}\nLongitude={position.Longitude}";
-                await PageDialogService.DisplayAlertAsync("Message", msg, "OK");
+                await PageDialogService.DisplayAlertAsync("Message", message, "OK");
 
                 ImageSource = ImageSource.FromStream(() =>
                 {
@@ -91,6 +91,37 @@ namespace XFCameraMediaPluginSample.ViewModels
             {
                 IsBusy = false;
             }
+        }
+
+        private async Task GetLocationAsync()
+        {
+            try
+            {
+                IsBusy = true;
+                // GPSで位置情報を取得
+                var locator = CrossGeolocator.Current;
+                locator.DesiredAccuracy = 50; // <- 1. 50mの精度に指定
+
+                var position = await locator.GetPositionAsync(new TimeSpan(0, 0, 0, 1), null, false);
+
+                var message = $"Altitude={position.Altitude}\nLongitude={position.Longitude}";
+                await PageDialogService.DisplayAlertAsync("Message", message, "OK");
+            }
+            finally
+            {
+                IsBusy = false;
+            }
+        }
+
+        /// <summary>
+        ///     サインインにします。
+        ///     TODO: サインインする処理の実装。
+        ///     返り値はTask<SignInResponse>にすること。
+        /// </summary>
+        /// <returns>The in async.</returns>
+        private async Task SignInAsync()
+        {
+            throw new NotImplementedException();
         }
 
 
