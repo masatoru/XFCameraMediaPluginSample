@@ -5,6 +5,11 @@ using XFCameraMediaPluginSample.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Prism.Unity;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using Microsoft.AppCenter.Distribute;
+using Microsoft.AppCenter.Push;
+using XFCameraMediaPluginSample.Helpers;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace XFCameraMediaPluginSample
@@ -18,7 +23,12 @@ namespace XFCameraMediaPluginSample
          */
         public App() : this(null) { }
 
-        public App(IPlatformInitializer initializer) : base(initializer) { }
+        public App(IPlatformInitializer initializer) : base(initializer)
+        {
+            // Handle when your app starts
+            Microsoft.AppCenter.AppCenter.Start(AppConstants.AppCenterStart,
+                               typeof(Analytics), typeof(Crashes), typeof(Distribute), typeof(Push));
+        }
 
         protected override async void OnInitialized()
         {
