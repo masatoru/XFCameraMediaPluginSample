@@ -64,11 +64,14 @@ namespace XFCameraMediaPluginSample.ViewModels
 
             try
             {
-                var hasPermission = await Utils.CheckPermissions(Permission.Location);
+                IsBusy = true;
+
+                // 設定→プライバシー→カメラ→このアプリ→OFF
+                // のときにメッセージを表示してfalseが戻る
+                var hasPermission = await Utils.CheckPermissions(Permission.Camera);
                 if (!hasPermission)
                     return;
-                
-                IsBusy = true;
+
                 var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
                 {
                     Directory = "Sample",
@@ -98,6 +101,13 @@ namespace XFCameraMediaPluginSample.ViewModels
             try
             {
                 IsBusy = true;
+
+                // プライバシー→位置情報サービス→このアプリ→許可しない
+                // のときにメッセージを表示してfalseが戻る
+                var hasPermission = await Utils.CheckPermissions(Permission.Location);
+                if (!hasPermission)
+                    return;
+
                 // GPSで位置情報を取得
                 var locator = CrossGeolocator.Current;
                 locator.DesiredAccuracy = 50; // <- 1. 50mの精度に指定
