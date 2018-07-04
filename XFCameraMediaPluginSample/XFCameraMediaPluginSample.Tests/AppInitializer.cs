@@ -37,8 +37,6 @@ namespace XFCameraMediaPluginSample.Tests
                 // TODO: Update this path to point to your iOS app and uncomment the
                 // code if the app is not included in the solution.
                 //.AppBundle ("../../../iOS/bin/iPhoneSimulator/Debug/XamarinForms.iOS.app")
-                .PreferIdeSettings()
-                .InstalledApp("com.companyname.XFCameraMediaPluginSample")
                 .EnableLocalScreenshots()
                 .StartApp();
         }

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage x:Class="XFCameraMediaPluginSample.Views.MainPage"
              xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             AutomationId="MainPage">
     <StackLayout x:Name="baseLayout"
                  VerticalOptions="FillAndExpand"
                  Orientation="Vertical"
@@ -20,12 +21,12 @@
                                     x:TypeArguments="Thickness" />
                     </StackLayout.Padding>
                     <!--  ここに配置するコンテンツを置く  -->
-                    <Button Command="{Binding SignInCommand}" Text="Sign In"/>
-                    <Button Command="{Binding TakePhotoCommand}" Text="Take Photo"/>
+                    <Button Command="{Binding SignInCommand}" AutomationId="SignInCommand" Text="Sign In"/>
+                    <Button Command="{Binding TakePhotoCommand}" AutomationId="TakePhotoCommand" Text="Take Photo"/>
                     <Image HorizontalOptions="Fill"
                            VerticalOptions="Fill"
                            Source="{Binding ImageSource}" />
-                    <Button Command="{Binding GetLocationCommand}" Text="Get Location"/>
+                    <Button Command="{Binding GetLocationCommand}" AutomationId="GetLocationCommand" Text="Get Location"/>
                 </StackLayout>
                 <ContentView x:Name="cvLayer"
                              HorizontalOptions="Center"
