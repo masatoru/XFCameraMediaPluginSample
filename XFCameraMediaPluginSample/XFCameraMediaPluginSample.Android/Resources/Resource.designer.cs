@@ -26,6 +26,27 @@ namespace XFCameraMediaPluginSample.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_dialog_actioned_on_disabled_toast = global::XFCameraMediaPluginSample.Droid.Resource.String.appcenter_distribute_dialog_actioned_on_disabled_toast;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_download_progress_number_format = global::XFCameraMediaPluginSample.Droid.Resource.String.appcenter_distribute_download_progress_number_format;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_downloading_mandatory_update = global::XFCameraMediaPluginSample.Droid.Resource.String.appcenter_distribute_downloading_mandatory_update;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_install = global::XFCameraMediaPluginSample.Droid.Resource.String.appcenter_distribute_install;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_install_ready_message = global::XFCameraMediaPluginSample.Droid.Resource.String.appcenter_distribute_install_ready_message;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_install_ready_title = global::XFCameraMediaPluginSample.Droid.Resource.String.appcenter_distribute_install_ready_title;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_notification_category = global::XFCameraMediaPluginSample.Droid.Resource.String.appcenter_distribute_notification_category;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_unknown_sources_dialog_message = global::XFCameraMediaPluginSample.Droid.Resource.String.appcenter_distribute_unknown_sources_dialog_message;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_unknown_sources_dialog_settings = global::XFCameraMediaPluginSample.Droid.Resource.String.appcenter_distribute_unknown_sources_dialog_settings;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_dialog_download = global::XFCameraMediaPluginSample.Droid.Resource.String.appcenter_distribute_update_dialog_download;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_dialog_message_mandatory = global::XFCameraMediaPluginSample.Droid.Resource.String.appcenter_distribute_update_dialog_message_mandatory;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_dialog_message_optional = global::XFCameraMediaPluginSample.Droid.Resource.String.appcenter_distribute_update_dialog_message_optional;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_dialog_postpone = global::XFCameraMediaPluginSample.Droid.Resource.String.appcenter_distribute_update_dialog_postpone;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_dialog_title = global::XFCameraMediaPluginSample.Droid.Resource.String.appcenter_distribute_update_dialog_title;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_dialog_view_release_notes = global::XFCameraMediaPluginSample.Droid.Resource.String.appcenter_distribute_update_dialog_view_release_notes;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_failed_dialog_ignore = global::XFCameraMediaPluginSample.Droid.Resource.String.appcenter_distribute_update_failed_dialog_ignore;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_failed_dialog_message = global::XFCameraMediaPluginSample.Droid.Resource.String.appcenter_distribute_update_failed_dialog_message;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_failed_dialog_reinstall = global::XFCameraMediaPluginSample.Droid.Resource.String.appcenter_distribute_update_failed_dialog_reinstall;
+			global::Microsoft.AppCenter.Distribute.Resource.String.appcenter_distribute_update_failed_dialog_title = global::XFCameraMediaPluginSample.Droid.Resource.String.appcenter_distribute_update_failed_dialog_title;
+			global::Microsoft.AppCenter.Push.Android.Resource.Drawable.ic_stat_notify_dot = global::XFCameraMediaPluginSample.Droid.Resource.Drawable.ic_stat_notify_dot;
+			global::Microsoft.AppCenter.Push.Android.Resource.String.library_name = global::XFCameraMediaPluginSample.Droid.Resource.String.library_name;
 			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::XFCameraMediaPluginSample.Droid.Resource.Attribute.actionBarSize;
 		}
 		
@@ -2330,26 +2351,26 @@ namespace XFCameraMediaPluginSample.Droid
 			// aapt resource value: 0x7f020053
 			public const int avd_hide_password = 2130837587;
 			
-			// aapt resource value: 0x7f020130
-			public const int avd_hide_password_1 = 2130837808;
-			
 			// aapt resource value: 0x7f020131
-			public const int avd_hide_password_2 = 2130837809;
+			public const int avd_hide_password_1 = 2130837809;
 			
 			// aapt resource value: 0x7f020132
-			public const int avd_hide_password_3 = 2130837810;
+			public const int avd_hide_password_2 = 2130837810;
+			
+			// aapt resource value: 0x7f020133
+			public const int avd_hide_password_3 = 2130837811;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_show_password = 2130837588;
 			
-			// aapt resource value: 0x7f020133
-			public const int avd_show_password_1 = 2130837811;
-			
 			// aapt resource value: 0x7f020134
-			public const int avd_show_password_2 = 2130837812;
+			public const int avd_show_password_1 = 2130837812;
 			
 			// aapt resource value: 0x7f020135
-			public const int avd_show_password_3 = 2130837813;
+			public const int avd_show_password_2 = 2130837813;
+			
+			// aapt resource value: 0x7f020136
+			public const int avd_show_password_3 = 2130837814;
 			
 			// aapt resource value: 0x7f020055
 			public const int design_bottom_navigation_item_background = 2130837589;
@@ -2883,130 +2904,133 @@ namespace XFCameraMediaPluginSample.Droid
 			public const int ic_mr_button_grey = 2130837765;
 			
 			// aapt resource value: 0x7f020106
-			public const int ic_vol_type_speaker_dark = 2130837766;
+			public const int ic_stat_notify_dot = 2130837766;
 			
 			// aapt resource value: 0x7f020107
-			public const int ic_vol_type_speaker_group_dark = 2130837767;
+			public const int ic_vol_type_speaker_dark = 2130837767;
 			
 			// aapt resource value: 0x7f020108
-			public const int ic_vol_type_speaker_group_light = 2130837768;
+			public const int ic_vol_type_speaker_group_dark = 2130837768;
 			
 			// aapt resource value: 0x7f020109
-			public const int ic_vol_type_speaker_light = 2130837769;
+			public const int ic_vol_type_speaker_group_light = 2130837769;
 			
 			// aapt resource value: 0x7f02010a
-			public const int ic_vol_type_tv_dark = 2130837770;
+			public const int ic_vol_type_speaker_light = 2130837770;
 			
 			// aapt resource value: 0x7f02010b
-			public const int ic_vol_type_tv_light = 2130837771;
+			public const int ic_vol_type_tv_dark = 2130837771;
 			
 			// aapt resource value: 0x7f02010c
-			public const int icon = 2130837772;
+			public const int ic_vol_type_tv_light = 2130837772;
 			
 			// aapt resource value: 0x7f02010d
-			public const int mr_button_connected_dark = 2130837773;
+			public const int icon = 2130837773;
 			
 			// aapt resource value: 0x7f02010e
-			public const int mr_button_connected_light = 2130837774;
+			public const int mr_button_connected_dark = 2130837774;
 			
 			// aapt resource value: 0x7f02010f
-			public const int mr_button_connecting_dark = 2130837775;
+			public const int mr_button_connected_light = 2130837775;
 			
 			// aapt resource value: 0x7f020110
-			public const int mr_button_connecting_light = 2130837776;
+			public const int mr_button_connecting_dark = 2130837776;
 			
 			// aapt resource value: 0x7f020111
-			public const int mr_button_dark = 2130837777;
+			public const int mr_button_connecting_light = 2130837777;
 			
 			// aapt resource value: 0x7f020112
-			public const int mr_button_light = 2130837778;
+			public const int mr_button_dark = 2130837778;
 			
 			// aapt resource value: 0x7f020113
-			public const int mr_dialog_close_dark = 2130837779;
+			public const int mr_button_light = 2130837779;
 			
 			// aapt resource value: 0x7f020114
-			public const int mr_dialog_close_light = 2130837780;
+			public const int mr_dialog_close_dark = 2130837780;
 			
 			// aapt resource value: 0x7f020115
-			public const int mr_dialog_material_background_dark = 2130837781;
+			public const int mr_dialog_close_light = 2130837781;
 			
 			// aapt resource value: 0x7f020116
-			public const int mr_dialog_material_background_light = 2130837782;
+			public const int mr_dialog_material_background_dark = 2130837782;
 			
 			// aapt resource value: 0x7f020117
-			public const int mr_group_collapse = 2130837783;
+			public const int mr_dialog_material_background_light = 2130837783;
 			
 			// aapt resource value: 0x7f020118
-			public const int mr_group_expand = 2130837784;
+			public const int mr_group_collapse = 2130837784;
 			
 			// aapt resource value: 0x7f020119
-			public const int mr_media_pause_dark = 2130837785;
+			public const int mr_group_expand = 2130837785;
 			
 			// aapt resource value: 0x7f02011a
-			public const int mr_media_pause_light = 2130837786;
+			public const int mr_media_pause_dark = 2130837786;
 			
 			// aapt resource value: 0x7f02011b
-			public const int mr_media_play_dark = 2130837787;
+			public const int mr_media_pause_light = 2130837787;
 			
 			// aapt resource value: 0x7f02011c
-			public const int mr_media_play_light = 2130837788;
+			public const int mr_media_play_dark = 2130837788;
 			
 			// aapt resource value: 0x7f02011d
-			public const int mr_media_stop_dark = 2130837789;
+			public const int mr_media_play_light = 2130837789;
 			
 			// aapt resource value: 0x7f02011e
-			public const int mr_media_stop_light = 2130837790;
+			public const int mr_media_stop_dark = 2130837790;
 			
 			// aapt resource value: 0x7f02011f
-			public const int mr_vol_type_audiotrack_dark = 2130837791;
+			public const int mr_media_stop_light = 2130837791;
 			
 			// aapt resource value: 0x7f020120
-			public const int mr_vol_type_audiotrack_light = 2130837792;
+			public const int mr_vol_type_audiotrack_dark = 2130837792;
 			
 			// aapt resource value: 0x7f020121
-			public const int navigation_empty_icon = 2130837793;
+			public const int mr_vol_type_audiotrack_light = 2130837793;
 			
 			// aapt resource value: 0x7f020122
-			public const int notification_action_background = 2130837794;
+			public const int navigation_empty_icon = 2130837794;
 			
 			// aapt resource value: 0x7f020123
-			public const int notification_bg = 2130837795;
+			public const int notification_action_background = 2130837795;
 			
 			// aapt resource value: 0x7f020124
-			public const int notification_bg_low = 2130837796;
+			public const int notification_bg = 2130837796;
 			
 			// aapt resource value: 0x7f020125
-			public const int notification_bg_low_normal = 2130837797;
+			public const int notification_bg_low = 2130837797;
 			
 			// aapt resource value: 0x7f020126
-			public const int notification_bg_low_pressed = 2130837798;
+			public const int notification_bg_low_normal = 2130837798;
 			
 			// aapt resource value: 0x7f020127
-			public const int notification_bg_normal = 2130837799;
+			public const int notification_bg_low_pressed = 2130837799;
 			
 			// aapt resource value: 0x7f020128
-			public const int notification_bg_normal_pressed = 2130837800;
+			public const int notification_bg_normal = 2130837800;
 			
 			// aapt resource value: 0x7f020129
-			public const int notification_icon_background = 2130837801;
-			
-			// aapt resource value: 0x7f02012e
-			public const int notification_template_icon_bg = 2130837806;
-			
-			// aapt resource value: 0x7f02012f
-			public const int notification_template_icon_low_bg = 2130837807;
+			public const int notification_bg_normal_pressed = 2130837801;
 			
 			// aapt resource value: 0x7f02012a
-			public const int notification_tile_bg = 2130837802;
+			public const int notification_icon_background = 2130837802;
+			
+			// aapt resource value: 0x7f02012f
+			public const int notification_template_icon_bg = 2130837807;
+			
+			// aapt resource value: 0x7f020130
+			public const int notification_template_icon_low_bg = 2130837808;
 			
 			// aapt resource value: 0x7f02012b
-			public const int notify_panel_notification_icon_bg = 2130837803;
+			public const int notification_tile_bg = 2130837803;
 			
 			// aapt resource value: 0x7f02012c
-			public const int tooltip_frame_dark = 2130837804;
+			public const int notify_panel_notification_icon_bg = 2130837804;
 			
 			// aapt resource value: 0x7f02012d
-			public const int tooltip_frame_light = 2130837805;
+			public const int tooltip_frame_dark = 2130837805;
+			
+			// aapt resource value: 0x7f02012e
+			public const int tooltip_frame_light = 2130837806;
 			
 			static Drawable()
 			{
@@ -4021,11 +4045,71 @@ namespace XFCameraMediaPluginSample.Droid
 			// aapt resource value: 0x7f0a0033
 			public const int appbar_scrolling_view_behavior = 2131361843;
 			
+			// aapt resource value: 0x7f0a003d
+			public const int appcenter_distribute_dialog_actioned_on_disabled_toast = 2131361853;
+			
+			// aapt resource value: 0x7f0a003e
+			public const int appcenter_distribute_download_progress_number_format = 2131361854;
+			
+			// aapt resource value: 0x7f0a003f
+			public const int appcenter_distribute_downloading_mandatory_update = 2131361855;
+			
+			// aapt resource value: 0x7f0a0040
+			public const int appcenter_distribute_install = 2131361856;
+			
+			// aapt resource value: 0x7f0a0041
+			public const int appcenter_distribute_install_ready_message = 2131361857;
+			
+			// aapt resource value: 0x7f0a0042
+			public const int appcenter_distribute_install_ready_title = 2131361858;
+			
+			// aapt resource value: 0x7f0a0043
+			public const int appcenter_distribute_notification_category = 2131361859;
+			
+			// aapt resource value: 0x7f0a0044
+			public const int appcenter_distribute_unknown_sources_dialog_message = 2131361860;
+			
+			// aapt resource value: 0x7f0a0045
+			public const int appcenter_distribute_unknown_sources_dialog_settings = 2131361861;
+			
+			// aapt resource value: 0x7f0a0046
+			public const int appcenter_distribute_update_dialog_download = 2131361862;
+			
+			// aapt resource value: 0x7f0a0047
+			public const int appcenter_distribute_update_dialog_message_mandatory = 2131361863;
+			
+			// aapt resource value: 0x7f0a0048
+			public const int appcenter_distribute_update_dialog_message_optional = 2131361864;
+			
+			// aapt resource value: 0x7f0a0049
+			public const int appcenter_distribute_update_dialog_postpone = 2131361865;
+			
+			// aapt resource value: 0x7f0a004a
+			public const int appcenter_distribute_update_dialog_title = 2131361866;
+			
+			// aapt resource value: 0x7f0a004b
+			public const int appcenter_distribute_update_dialog_view_release_notes = 2131361867;
+			
+			// aapt resource value: 0x7f0a004c
+			public const int appcenter_distribute_update_failed_dialog_ignore = 2131361868;
+			
+			// aapt resource value: 0x7f0a004d
+			public const int appcenter_distribute_update_failed_dialog_message = 2131361869;
+			
+			// aapt resource value: 0x7f0a004e
+			public const int appcenter_distribute_update_failed_dialog_reinstall = 2131361870;
+			
+			// aapt resource value: 0x7f0a004f
+			public const int appcenter_distribute_update_failed_dialog_title = 2131361871;
+			
 			// aapt resource value: 0x7f0a0034
 			public const int bottom_sheet_behavior = 2131361844;
 			
 			// aapt resource value: 0x7f0a0035
 			public const int character_counter_pattern = 2131361845;
+			
+			// aapt resource value: 0x7f0a003c
+			public const int library_name = 2131361852;
 			
 			// aapt resource value: 0x7f0a0000
 			public const int mr_button_content_description = 2131361792;
